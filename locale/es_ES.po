@@ -1,0 +1,99 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:helpdesk,invoices:"
+msgid "Invoices"
+msgstr "Todas las facturas"
+
+msgctxt "field:invoice.helpdesk,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:invoice.helpdesk,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:invoice.helpdesk,helpdesk:"
+msgid "Helpdesk"
+msgstr "Soporte"
+
+msgctxt "field:invoice.helpdesk,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:invoice.helpdesk,invoice:"
+msgid "Invoice"
+msgstr "Factura"
+
+msgctxt "field:invoice.helpdesk,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:invoice.helpdesk,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:invoice.helpdesk,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "model:invoice.helpdesk,name:"
+msgid "Invoice - Helpdesk"
+msgstr "Soporte - Facturación"
+
+msgctxt "model:ir.action,name:act_alls_invoice_helpdesk"
+msgid "All Helpdesks"
+msgstr "Todos los soportes"
+
+msgctxt "model:ir.action,name:act_invoice_helpdesk"
+msgid "Helpdesks"
+msgstr "Soportes"
+
+msgctxt "model:ir.action,name:act_invoice_helpdesk_invoice_form"
+msgid "Helpdesks"
+msgstr "Soportes"
+
+msgctxt "model:ir.action,name:act_invoice_helpdesk_manager"
+msgid "Invoice Helpdesks"
+msgstr "Soportes de facturación"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_invoice_helpdesk_all_my"
+msgid "All My Helpdesks"
+msgstr "Todos mis soportes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_invoice_helpdesk_open"
+msgid "Open"
+msgstr "Abrir"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_invoice_helpdesk_pending"
+msgid "Pending"
+msgstr "Pendientes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_invoice_helpdesk_unreads"
+msgid "Unreads"
+msgstr "No leidos"
+
+msgctxt "model:ir.ui.menu,name:menu_invoice_all_helpdesk"
+msgid "All Helpdesks"
+msgstr "Todos los soportes"
+
+msgctxt "model:ir.ui.menu,name:menu_invoice_helpdesk"
+msgid "Helpdesks"
+msgstr "Soportes"
+
+msgctxt "model:ir.ui.menu,name:menu_invoice_helpdesk_manager"
+msgid "Invoice Helpdesks"
+msgstr "Soportes de facturación"
+
+msgctxt "model:res.group,name:group_invoice_helpdesk"
+msgid "Helpdesk Invoice"
+msgstr "Sorporte facturación"
+
+msgctxt "selection:helpdesk,kind:"
+msgid "Invoice"
+msgstr "Factura"
