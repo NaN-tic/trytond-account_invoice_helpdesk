@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!-- This file is part of the invoice_helpdesk module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- Groups -->
+        <record model="res.group" id="group_invoice_helpdesk">
+            <field name="name">Helpdesk Invoice</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_invoice_helpdesk">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_invoice_helpdesk"/>
+        </record>
+
+        <!-- Helpdesk -->
+        <record model="ir.ui.view" id="helpdesk_view_form">
+            <field name="model">helpdesk</field>
+            <field name="inherit" ref="helpdesk.helpdesk_view_form"/>
+            <field name="name">helpdesk_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_invoice_helpdesk_manager">
+            <field name="name">Invoice Helpdesks</field>
+            <field name="res_model">helpdesk</field>
+            <field name="domain">[('kind', '=', 'invoice')]</field>
+            <field name="context">{'kind': 'invoice'}</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_invoice_helpdesk_manager_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="helpdesk.helpdesk_view_tree"/>
+            <field name="act_window" ref="act_invoice_helpdesk_manager"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_invoice_helpdesk_manager_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="helpdesk_view_form"/>
+            <field name="act_window" ref="act_invoice_helpdesk_manager"/>
+        </record>
+        <menuitem
+            parent="helpdesk.menu_helpdesk"
+            action="act_invoice_helpdesk_manager"
+            id="menu_invoice_helpdesk_manager"/>
+
+        <record model="ir.action.act_window" id="act_invoice_helpdesk">
+            <field name="name">Helpdesks</field>
+            <field name="res_model">helpdesk</field>
+            <field name="domain">[('kind', '=', 'invoice')]</field>
+            <field name="context">{'kind': 'invoice'}</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_invoice_helpdesk_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="helpdesk.helpdesk_view_tree"/>
+            <field name="act_window" ref="act_invoice_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_invoice_helpdesk_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="helpdesk_view_form"/>
+            <field name="act_window" ref="act_invoice_helpdesk"/>
+        </record>
+        <menuitem
+            action="act_invoice_helpdesk"
+            id="menu_invoice_helpdesk"
+            parent="account_invoice.menu_invoices"/>
+
+        <record model="ir.ui.menu-res.group" id="menu_invoice_helpdesk_group_invoice_helpdesk">
+            <field name="menu" ref="menu_invoice_helpdesk"/>
+            <field name="group" ref="group_invoice_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_invoice_helpdesk_domain_invoice_helpdesk_unreads">
+            <field name="name">Unreads</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain">[('unread','=',True),('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
+            <field name="act_window" ref="act_invoice_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_invoice_helpdesk_domain_invoice_helpdesk_pending">
+            <field name="name">Pending</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain">[('state', 'in', ['pending']), ('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
+            <field name="act_window" ref="act_invoice_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_invoice_helpdesk_domain_invoice_helpdesk_open">
+            <field name="name">Open</field>
+            <field name="sequence" eval="30"/>
+            <field name="domain">[('state', 'in', ['open']),('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
+            <field name="act_window" ref="act_invoice_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_invoice_helpdesk_domain_invoice_helpdesk_all_my">
+            <field name="name">All My Helpdesks</field>
+            <field name="sequence" eval="40"/>
+            <field name="domain">[('employee.id', '=', Eval('context', {}).get('employee', -1))]</field>
+            <field name="act_window" ref="act_invoice_helpdesk"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_alls_invoice_helpdesk">
+            <field name="name">All Helpdesks</field>
+            <field name="res_model">helpdesk</field>
+            <field name="domain">[('kind', '=', 'invoice')]</field>
+            <field name="context">{'kind': 'invoice'}</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_invoice_helpdesk_view5">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="helpdesk.helpdesk_view_tree"/>
+            <field name="act_window" ref="act_alls_invoice_helpdesk"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_invoice_helpdesk_view6">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="helpdesk_view_form"/>
+            <field name="act_window" ref="act_alls_invoice_helpdesk"/>
+        </record>
+        <menuitem
+            parent="menu_invoice_helpdesk"
+            action="act_alls_invoice_helpdesk"
+            id="menu_invoice_all_helpdesk"/>
+        <record model="ir.ui.menu-res.group" id="menu_invoice_helpdesk_group_helpdesk_invoice_manager">
+            <field name="menu" ref="menu_invoice_helpdesk"/>
+            <field name="group" ref="group_invoice_helpdesk"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_invoice_helpdesk_invoice_form">
+            <field name="name">Helpdesks</field>
+            <field name="res_model">helpdesk</field>
+            <field name="domain">[('kind', '=', 'invoice'), ('invoices', '=', Eval('active_id'))]</field>
+            <field name="context">{'kind': 'invoice'}</field>
+        </record>
+        <record model="ir.action.keyword" id="act_open_invoice_helpdesk_invoice_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">account.invoice,-1</field>
+            <field name="action" ref="act_invoice_helpdesk_invoice_form"/>
+        </record>
+
+        <!-- Access Helpdesk Invoice -->
+        <record model="ir.model.access" id="access_invoice_helpdesk">
+            <field name="model" search="[('model', '=', 'helpdesk')]"/>
+            <field name="group" ref="group_invoice_helpdesk"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_invoice_helpdesk_talk">
+            <field name="model" search="[('model', '=', 'helpdesk.talk')]"/>
+            <field name="group" ref="group_invoice_helpdesk"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_invoice_helpdesk_log">
+            <field name="model" search="[('model', '=', 'helpdesk.log')]"/>
+            <field name="group" ref="group_invoice_helpdesk"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+    </data>
+</tryton>
