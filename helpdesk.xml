@@ -13,6 +13,25 @@ copyright notices and license terms. -->
             <field name="group" ref="group_invoice_helpdesk"/>
         </record>
 
+        <!-- Party -->
+        <record model="ir.action.act_window" id="act_invoice_helpdesk_form2">
+            <field name="name">Invoice Helpdesks</field>
+            <field name="res_model">helpdesk</field>
+            <field name="domain">[('kind', '=', 'invoice'), ("party", "=", Eval('active_id'))]</field>
+            <field name="context">{'kind': 'invoice'}</field>
+        </record>
+        <record model="ir.action.keyword"
+                id="act_open_invoice_helpdesk_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">party.party,-1</field>
+            <field name="action" ref="act_invoice_helpdesk_form2"/>
+        </record>
+        <record model="ir.action-res.group"
+            id="act_invoice_helodesk_form2-group_invoice">
+            <field name="action" ref="act_invoice_helpdesk_form2"/>
+            <field name="group" ref="account.group_account"/>
+        </record>
+
         <!-- Helpdesk -->
         <record model="ir.ui.view" id="helpdesk_view_form">
             <field name="model">helpdesk</field>
