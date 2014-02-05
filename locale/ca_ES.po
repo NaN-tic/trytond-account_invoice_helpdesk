@@ -50,13 +50,17 @@ msgctxt "model:ir.action,name:act_invoice_helpdesk"
 msgid "Helpdesks"
 msgstr "Suports"
 
+msgctxt "model:ir.action,name:act_invoice_helpdesk_form2"
+msgid "Invoice Helpdesks"
+msgstr "Suport de facturació"
+
 msgctxt "model:ir.action,name:act_invoice_helpdesk_invoice_form"
 msgid "Helpdesks"
 msgstr "Suports"
 
 msgctxt "model:ir.action,name:act_invoice_helpdesk_manager"
 msgid "Invoice Helpdesks"
-msgstr "Suports de facturació"
+msgstr "Suport de facturació"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_invoice_helpdesk_all_my"
@@ -88,7 +92,7 @@ msgstr "Suports"
 
 msgctxt "model:ir.ui.menu,name:menu_invoice_helpdesk_manager"
 msgid "Invoice Helpdesks"
-msgstr "Suports de facturació"
+msgstr "Suport de facturació"
 
 msgctxt "model:res.group,name:group_invoice_helpdesk"
 msgid "Helpdesk Invoice"
