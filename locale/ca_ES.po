@@ -63,9 +63,39 @@ msgid "Invoice Helpdesks"
 msgstr "Suport de facturació"
 
 msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_alls_invoice_helpdesk_all_my"
+msgid "All"
+msgstr "Tots"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_alls_invoice_helpdesk_done"
+msgid "Done"
+msgstr "Realitzats"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_alls_invoice_helpdesk_open"
+msgid "Open"
+msgstr "Oberts"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_alls_invoice_helpdesk_pending"
+msgid "Pending"
+msgstr "Pendents"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_alls_invoice_helpdesk_unreads"
+msgid "Unreads"
+msgstr "No llegits"
+
+msgctxt ""
 "model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_invoice_helpdesk_all_my"
-msgid "All My Helpdesks"
-msgstr "Tots els meus suports"
+msgid "All"
+msgstr "Tots"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_invoice_helpdesk_done"
+msgid "Done"
+msgstr "Realitzats"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_invoice_helpdesk_open"
