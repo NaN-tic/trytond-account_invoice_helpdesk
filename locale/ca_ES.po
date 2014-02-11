@@ -8,11 +8,11 @@ msgstr "Totes les factures"
 
 msgctxt "field:invoice.helpdesk,create_date:"
 msgid "Create Date"
-msgstr "Data de creació"
+msgstr "Data creació"
 
 msgctxt "field:invoice.helpdesk,create_uid:"
 msgid "Create User"
-msgstr "Usuari de creació"
+msgstr "Usuari creació"
 
 msgctxt "field:invoice.helpdesk,helpdesk:"
 msgid "Helpdesk"
@@ -28,7 +28,7 @@ msgstr "Factura"
 
 msgctxt "field:invoice.helpdesk,rec_name:"
 msgid "Name"
-msgstr "Nom del camp"
+msgstr "Nom"
 
 msgctxt "field:invoice.helpdesk,write_date:"
 msgid "Write Date"
