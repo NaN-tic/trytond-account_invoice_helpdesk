@@ -126,7 +126,7 @@ msgstr "Soporte de facturación"
 
 msgctxt "model:res.group,name:group_invoice_helpdesk"
 msgid "Helpdesk Invoice"
-msgstr "Sorporte facturación"
+msgstr "Soporte facturación"
 
 msgctxt "selection:helpdesk,kind:"
 msgid "Invoice"
