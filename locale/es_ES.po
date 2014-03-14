@@ -4,7 +4,7 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "field:helpdesk,invoices:"
 msgid "Invoices"
-msgstr "Todas las facturas"
+msgstr "Facturas"
 
 msgctxt "field:invoice.helpdesk,create_date:"
 msgid "Create Date"
@@ -89,7 +89,7 @@ msgstr "No leidos"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_invoice_helpdesk_all_my"
-msgid "All"
+msgid "Todos mis soportes"
 msgstr "Todos"
 
 msgctxt ""
