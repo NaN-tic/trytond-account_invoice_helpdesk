@@ -89,7 +89,7 @@ msgstr "No llegits"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_invoice_helpdesk_domain_invoice_helpdesk_all_my"
-msgid "Todos mis soportes"
+msgid "All"
 msgstr "Tots"
 
 msgctxt ""
