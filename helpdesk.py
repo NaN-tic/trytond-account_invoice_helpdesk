@@ -5,9 +5,7 @@ from trytond.model import ModelSQL, fields
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 
-__all__ = [
-    'Helpdesk', 'InvoiceHelpdesk'
-    ]
+__all__ = ['Helpdesk', 'InvoiceHelpdesk']
 
 
 class Helpdesk:
@@ -18,7 +16,7 @@ class Helpdesk:
             'readonly': Eval('state').in_(['cancel', 'done']),
             'invisible': ~Eval('kind').in_(['invoice', 'generic']),
             },
-        depends=['state'])
+        depends=['state', 'kind'])
 
     @classmethod
     def __setup__(cls):
