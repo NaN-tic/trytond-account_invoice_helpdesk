@@ -25,6 +25,13 @@ class Helpdesk:
         if not value in cls.kind.selection:
             cls.kind.selection.append(value)
 
+    @classmethod
+    def view_attributes(cls):
+        return super(Helpdesk, cls).view_attributes() + [
+            ('//page[@id="invoice"]', 'states', {
+                    'invisible': ~Eval('kind').in_(['invoice', 'generic']),
+                    })]
+
 
 class InvoiceHelpdesk(ModelSQL):
     'Invoice - Helpdesk'
