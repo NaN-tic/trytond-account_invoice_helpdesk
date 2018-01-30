@@ -8,7 +8,7 @@ msgstr "Facturas"
 
 msgctxt "field:helpdesk.configuration,smtp_invoice:"
 msgid "SMTP Invoice Server"
-msgstr "Servidor SMTP de facturación "
+msgstr "Servidor SMTP de facturación"
 
 msgctxt "field:invoice.helpdesk,create_date:"
 msgid "Create Date"
