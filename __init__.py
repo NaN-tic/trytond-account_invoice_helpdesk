@@ -2,14 +2,15 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
 from trytond.pool import Pool
-from .configuration import *
-from .helpdesk import *
-from .getmail import *
+from . import configuration
+from . import helpdesk
+from . import getmail
+
 
 def register():
     Pool.register(
-        HelpdeskConfiguration,
-        Helpdesk,
-        InvoiceHelpdesk,
-        GetmailServer,
+        configuration.HelpdeskConfiguration,
+        helpdesk.Helpdesk,
+        helpdesk.InvoiceHelpdesk,
+        getmail.GetmailServer,
         module='account_invoice_helpdesk', type_='model')

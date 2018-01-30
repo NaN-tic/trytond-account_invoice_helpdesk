@@ -5,20 +5,18 @@ from trytond.model import ModelSQL, fields
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 
-__all__ = [
-    'Helpdesk', 'InvoiceHelpdesk'
-    ]
-__metaclass__ = PoolMeta
+__all__ = ['Helpdesk', 'InvoiceHelpdesk']
 
 
 class Helpdesk:
+    __metaclass__ = PoolMeta
     __name__ = 'helpdesk'
     invoices = fields.Many2Many('invoice.helpdesk', 'helpdesk', 'invoice',
         'Invoices', states={
             'readonly': Eval('state').in_(['cancel', 'done']),
             'invisible': ~Eval('kind').in_(['invoice', 'generic']),
             },
-        depends=['state'])
+        depends=['state', 'kind'])
 
     @classmethod
     def __setup__(cls):

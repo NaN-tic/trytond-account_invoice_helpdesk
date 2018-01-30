@@ -12,11 +12,11 @@ msgstr "Servidor SMTP de facturación "
 
 msgctxt "field:invoice.helpdesk,create_date:"
 msgid "Create Date"
-msgstr "Fecha creación"
+msgstr "Fecha de creación"
 
 msgctxt "field:invoice.helpdesk,create_uid:"
 msgid "Create User"
-msgstr "Usuario creación"
+msgstr "Usuario de creación"
 
 msgctxt "field:invoice.helpdesk,helpdesk:"
 msgid "Helpdesk"
@@ -36,11 +36,11 @@ msgstr "Nombre"
 
 msgctxt "field:invoice.helpdesk,write_date:"
 msgid "Write Date"
-msgstr "Fecha modificación"
+msgstr "Fecha de modificación"
 
 msgctxt "field:invoice.helpdesk,write_uid:"
 msgid "Write User"
-msgstr "Usuario modificación"
+msgstr "Usuario de modificación"
 
 msgctxt "model:invoice.helpdesk,name:"
 msgid "Invoice - Helpdesk"
