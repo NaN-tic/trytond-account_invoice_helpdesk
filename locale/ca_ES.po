@@ -132,6 +132,10 @@ msgctxt "model:res.group,name:group_invoice_helpdesk"
 msgid "Helpdesk Invoice"
 msgstr "Suport de facturació"
 
+msgctxt "selection:getmail.server,kind:"
+msgid "Invoice"
+msgstr "Factura"
+
 msgctxt "selection:helpdesk,kind:"
 msgid "Invoice"
 msgstr "Factura"
