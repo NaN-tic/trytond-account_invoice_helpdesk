@@ -6,11 +6,16 @@ from . import configuration
 from . import helpdesk
 from . import getmail
 
-
 def register():
     Pool.register(
         configuration.HelpdeskConfiguration,
         helpdesk.Helpdesk,
         helpdesk.InvoiceHelpdesk,
-        getmail.GetmailServer,
         module='account_invoice_helpdesk', type_='model')
+    Pool.register(
+        getmail.GetmailServer,
+        depends=['getmail'],
+        module='account_invoice_helpdesk', type_='model')
+
+
+        
